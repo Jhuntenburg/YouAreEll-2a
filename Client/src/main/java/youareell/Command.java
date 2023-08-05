@@ -17,6 +17,7 @@ public class Command {
         POSTMSG("send"),
         // you may need to add more here...
         // for more commands
+        MYMESSAGES("mymessages"),
         QUIT("quit"),
         HELP("help"),
         ERR("error"),
@@ -115,7 +116,8 @@ public class Command {
     public boolean isMsgCmd() {
         // as you add ENUMs, add more to this condition.
         if (this.currentCmd == Verb.POSTMSG
-                || this.currentCmd == Verb.GETMESG) return true;
+                || this.currentCmd == Verb.GETMESG
+        || this.currentCmd == Verb.MYMESSAGES) return true;
         return false;
     }
 
